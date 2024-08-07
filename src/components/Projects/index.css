@@ -1,0 +1,44 @@
+.projects-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  color: white;
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+.work-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+}
+.work {
+  /* background-color: rgba(86, 86, 255, 0.3); */
+  /* height: 250px; */
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.work:hover {
+  border: 2px solid #678dff;
+}
+.work:hover > a > img {
+  transform: scale(1.1);
+}
+.work > a > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: contain;
+  transition: all 0.2s ease-in-out;
+}
+
+@media screen and (min-width: 769px) {
+  .work-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

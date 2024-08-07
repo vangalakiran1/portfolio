@@ -1,0 +1,114 @@
+header {
+  position: fixed;
+  top: 0;
+  height: 0;
+  width: 100%;
+  min-height: 65px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  margin-top: 20px;
+  z-index: 100;
+}
+.headerInner {
+  max-width: 1300px;
+  width: 100%;
+  height: 65px;
+  background-color: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(2px);
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px -3px #1a43bf;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.logo {
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav > ul.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.nav-item {
+  padding: 10px 20px;
+  margin: 0 5px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.nav-item:hover {
+  color: #3d6eff;
+}
+/* .nav-item.active {
+  color: #3d6eff;
+} */
+.closeBtn {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  nav > ul.menu {
+    flex-direction: column;
+    position: absolute;
+    top: calc(0% - 20px);
+    left: -150%;
+    width: 90%;
+    height: 100vh;
+    /* background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); */
+
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(20px);
+  }
+  nav > ul.active {
+    top: calc(0% - 20px);
+    left: calc(0% - 20px);
+  }
+  .nav-item {
+    margin: 10px;
+    display: block;
+  }
+}
+.cv-btn {
+  background-color: #1a43bf;
+  background-image: linear-gradient(#1a43bf, #001d75);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 769px) {
+  header {
+    padding: 0 40px;
+  }
+  .headerInner {
+    padding: 0 40px;
+  }
+  .closeBtn,
+  .menuBtn {
+    display: none;
+  }
+}
